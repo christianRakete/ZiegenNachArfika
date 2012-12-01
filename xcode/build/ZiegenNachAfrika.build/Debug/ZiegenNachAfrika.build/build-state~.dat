@@ -1,0 +1,197 @@
+TZiegenNachAfrika
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/Info.plist Info.plist
+cCpResource CinderApp.icns ./build/Debug/ZiegenNachAfrika.app/Contents/Resources/CinderApp.icns
+cProcessPCH++ /var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch.pth ZiegenNachAfrika_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrikaApp.o /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../src/ZiegenNachAfrikaApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/MacOS/ZiegenNachAfrika normal i386
+cTouch /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c00000000503F1B7700000000000000AA
+t1346313079
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+c0000000050B9CE4800000000000024F0
+t1354354248
+s9456
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c0000000050B9CE4A0000000000024D90
+t1354354250
+s150928
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioUnit.framework/AudioUnit
+c0000000050B9CE4A00000000000060B4
+t1354354250
+s24756
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000050B9CE4A00000000000001E5
+t1354354250
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c0000000050B9CE4A000000000000E920
+t1354354250
+s59680
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c0000000050A24E0E0000000000006530
+t1352814094
+s25904
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c0000000050A24E0F0000000000006560
+t1352814095
+s25952
+
+N/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c0000000050A24E15000000000007CED0
+t1352814101
+s511696
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c0000000050A24E22000000000002D360
+t1352814114
+s185184
+
+N/System/Library/Frameworks/QTKit.framework/QTKit
+c0000000050A24E2900000000004B9FB0
+t1352814121
+s4956080
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c0000000050A24F16000000000032B7E0
+t1352814358
+s3323872
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/../src/ZiegenNachAfrikaApp.cpp
+c0000000050B9D72C0000000000000239
+t1354356524
+s569
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app
+t2
+s0
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/Info.plist
+t2
+s0
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/MacOS/ZiegenNachAfrika
+t2
+s0
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/PkgInfo
+t2
+s0
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/Resources/CinderApp.icns
+t2
+s0
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrika.LinkFileList
+c0000000050B9D746000000000000009F
+t1354356550
+s159
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrikaApp.o
+t2
+s0
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/CinderApp.icns
+c0000000050B9D72C000000000001BEB5
+t1354356524
+s114357
+
+N/development/cinder-master/blocks/ZiegenNachAfrika/xcode/ZiegenNachAfrika_Prefix.pch
+c0000000050B9D72C0000000000000093
+t1354356524
+s147
+i<Cocoa/Cocoa.h>
+
+N/var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch.pth
+t2
+s0
+
+NInfo.plist
+c0000000050B9D72C0000000000000356
+t1354356524
+s854
+
+CBuild AST from /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../src/ZiegenNachAfrikaApp.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies02d622c60e6ab641^e770e9c60e6ab641^---0#1#0#--18"Check dependencies36"07B0DB51-6484-48CE-9C07-15EAD5E2A81F-
+
+CCompileC ./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrikaApp.o /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../src/ZiegenNachAfrikaApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s376049351.214955
+e376049360.807726
+r1
+xCompileC
+x./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrikaApp.o
+x/development/cinder-master/blocks/ZiegenNachAfrika/xcode/../src/ZiegenNachAfrikaApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../src/ZiegenNachAfrikaApp.cpp8b3637c70e6ab641^93c8ced00e6ab641^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/development/cinder-master/blocks/ZiegenNachAfrika/xcode/../src/ZiegenNachAfrikaApp.cpp0000000000000000^3078"CompileC ./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrikaApp.o ../src/ZiegenNachAfrikaApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /development/cinder-master/blocks/ZiegenNachAfrika/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -Wno-sign-conversion -iquote /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/ZiegenNachAfrika-generated-files.hmap -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/ZiegenNachAfrika-own-target-headers.hmap -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/ZiegenNachAfrika-all-target-headers.hmap -iquote /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/ZiegenNachAfrika-project-headers.hmap -iquote../../../include -iquote../include -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/build/Debug/include -I../../../boost -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/DerivedSources/i386 -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/DerivedSources -F/development/cinder-master/blocks/ZiegenNachAfrika/xcode/build/Debug -include /var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch -MMD -MT dependencies -MF /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrikaApp.d --serialize-diagnostics /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrikaApp.dia -c /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../src/ZiegenNachAfrikaApp.cpp -o /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrikaApp.o36"B93FFB9E-E6E6-48E3-AFEF-CF9EBBCEFE82-
+
+CCpResource CinderApp.icns ./build/Debug/ZiegenNachAfrika.app/Contents/Resources/CinderApp.icns
+s376049350.953831
+e376049350.982456
+r1
+xCpResource
+xCinderApp.icns
+x./build/Debug/ZiegenNachAfrika.app/Contents/Resources/CinderApp.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Copy ./build/Debug/ZiegenNachAfrika.app/Contents/Resources/CinderApp.icns5c8df4c60e6ab641^feb5fcc60e6ab641^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/Resources/CinderApp.icns000000000080d041^454"CpResource CinderApp.icns ./build/Debug/ZiegenNachAfrika.app/Contents/Resources/CinderApp.icns    cd /development/cinder-master/blocks/ZiegenNachAfrika/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /development/cinder-master/blocks/ZiegenNachAfrika/xcode/CinderApp.icns /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/Resources36"3363DC08-DD87-4E2B-8CA3-FFFE1F747AB9-
+
+CLd /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/MacOS/ZiegenNachAfrika normal i386
+s376049360.815709
+e376049366.373641
+r1
+xLd
+x/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/MacOS/ZiegenNachAfrika
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Link /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/MacOS/ZiegenNachAfrika8d09d1d00e6ab641^f1835fd60e6ab641^---0#0#0#--1113"Ld ./build/Debug/ZiegenNachAfrika.app/Contents/MacOS/ZiegenNachAfrika normal i386    cd /development/cinder-master/blocks/ZiegenNachAfrika/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/development/cinder-master/blocks/ZiegenNachAfrika/xcode/build/Debug -F/development/cinder-master/blocks/ZiegenNachAfrika/xcode/build/Debug -filelist /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/Objects-normal/i386/ZiegenNachAfrika.LinkFileList -mmacosx-version-min=10.7 ../../..//lib/libcinder_d.a -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/MacOS/ZiegenNachAfrika36"E7AE3C62-C851-4D6C-898C-18F67CB00633-
+
+CProcessInfoPlistFile /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/Info.plist Info.plist
+s376049350.917260
+e376049350.937365
+r1
+xProcessInfoPlistFile
+x/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/Info.plist
+xInfo.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plist99f5eac60e6ab641^4759f7c60e6ab641^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/development/cinder-master/blocks/ZiegenNachAfrika/xcode/Info.plist0000000000000000^465"ProcessInfoPlistFile ./build/Debug/ZiegenNachAfrika.app/Contents/Info.plist Info.plist    cd /development/cinder-master/blocks/ZiegenNachAfrika/xcode    builtin-infoPlistUtility Info.plist -genpkginfo /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app/Contents/Info.plist36"CA758358-49A9-4DC7-8D86-B58A1CC96A4B-
+
+CProcessPCH++ /Users/latsch/Library/Developer/Xcode/DerivedData/ZiegenNachAfrika-fpflfiaqmhadwxcrithyxuleblss/Index/PrecompiledHeaders/ZiegenNachAfrika_Prefix-hjxwqofhhdygjrctjahgdvprgqnb_ast/ZiegenNachAfrika_Prefix.pch.pth ZiegenNachAfrika_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch.pth ZiegenNachAfrika_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s376049351.003061
+e376049351.207290
+r1
+xProcessPCH++
+x/var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch.pth
+xZiegenNachAfrika_Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Precompile ZiegenNachAfrika_Prefix.pch080101c70e6ab641^d41035c70e6ab641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/development/cinder-master/blocks/ZiegenNachAfrika/xcode/ZiegenNachAfrika_Prefix.pch0000000000000000^3032"ProcessPCH++ /var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch.pth ZiegenNachAfrika_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /development/cinder-master/blocks/ZiegenNachAfrika/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -Wno-sign-conversion -iquote /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/ZiegenNachAfrika-generated-files.hmap -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/ZiegenNachAfrika-own-target-headers.hmap -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/ZiegenNachAfrika-all-target-headers.hmap -iquote /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/ZiegenNachAfrika-project-headers.hmap -iquote../../../include -iquote../include -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/build/Debug/include -I../../../boost -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/DerivedSources/i386 -I/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/ZiegenNachAfrika.build/Debug/ZiegenNachAfrika.build/DerivedSources -F/development/cinder-master/blocks/ZiegenNachAfrika/xcode/build/Debug --serialize-diagnostics /var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch.dia -c /development/cinder-master/blocks/ZiegenNachAfrika/xcode/ZiegenNachAfrika_Prefix.pch -o /var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/g8/535x_jys4c7dmwt17l48j3l00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ZiegenNachAfrika_Prefix-fynpqmnmntdmwdfoaqcxzqtujnco/ZiegenNachAfrika_Prefix.pch.d36"0B81737A-D1F2-47E5-A620-120E411B95A4-
+
+CTouch /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app
+s376049366.382005
+e376049366.457342
+r1
+xTouch
+x/development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Touch /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.appabea61d60e6ab641^c82675d60e6ab641^---0#0#0#--219"Touch ./build/Debug/ZiegenNachAfrika.app    cd /development/cinder-master/blocks/ZiegenNachAfrika/xcode    /usr/bin/touch -c /development/cinder-master/blocks/ZiegenNachAfrika/xcode/./build/Debug/ZiegenNachAfrika.app36"ADA11552-E72C-484E-872A-BD85B4F9DA08-
+
