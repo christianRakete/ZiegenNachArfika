@@ -67,6 +67,7 @@
 		6095A47F166A1CBF00AFA105 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6095A44F166A1CBF00AFA105 /* b2Rope.cpp */; };
 		6095A483166A2A1500AFA105 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6095A482166A2A1500AFA105 /* Particle.cpp */; };
 		6095A486166A2A8F00AFA105 /* Globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6095A485166A2A8F00AFA105 /* Globals.cpp */; };
+		6095A489166B59D700AFA105 /* Hills.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6095A488166B59D700AFA105 /* Hills.cpp */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -185,6 +186,8 @@
 		6095A482166A2A1500AFA105 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 		6095A484166A2A6B00AFA105 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		6095A485166A2A8F00AFA105 /* Globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Globals.cpp; sourceTree = "<group>"; };
+		6095A487166B595A00AFA105 /* Hills.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hills.h; sourceTree = "<group>"; };
+		6095A488166B59D700AFA105 /* Hills.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hills.cpp; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ZiegenNachAfrika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZiegenNachAfrika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,6 +218,7 @@
 			children = (
 				00BAE6590E7ED9C10018A608 /* ZiegenNachAfrikaApp.cpp */,
 				6095A482166A2A1500AFA105 /* Particle.cpp */,
+				6095A488166B59D700AFA105 /* Hills.cpp */,
 				6095A485166A2A8F00AFA105 /* Globals.cpp */,
 			);
 			name = Source;
@@ -273,6 +277,7 @@
 				32CA4F630368D1EE00C91783 /* ZiegenNachAfrika_Prefix.pch */,
 				6095A480166A28C800AFA105 /* Conversions.h */,
 				6095A481166A29EA00AFA105 /* Particle.h */,
+				6095A487166B595A00AFA105 /* Hills.h */,
 				6095A484166A2A6B00AFA105 /* Globals.h */,
 			);
 			name = Headers;
@@ -562,6 +567,7 @@
 				6095A47F166A1CBF00AFA105 /* b2Rope.cpp in Sources */,
 				6095A483166A2A1500AFA105 /* Particle.cpp in Sources */,
 				6095A486166A2A8F00AFA105 /* Globals.cpp in Sources */,
+				6095A489166B59D700AFA105 /* Hills.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

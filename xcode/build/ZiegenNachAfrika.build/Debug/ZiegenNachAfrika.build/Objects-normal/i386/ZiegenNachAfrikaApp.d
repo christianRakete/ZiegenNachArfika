@@ -1076,4 +1076,5 @@ dependencies: \
   ../../../include/cinder/Camera.h \
   /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../include/Conversions.h \
   /development/cinder-master/blocks/ZiegenNachAfrika/xcode/Globals.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/Particle.h
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/Particle.h \
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/Hills.h
