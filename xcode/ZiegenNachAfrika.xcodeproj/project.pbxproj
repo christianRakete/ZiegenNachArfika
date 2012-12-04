@@ -23,6 +23,12 @@
 		607309D5166CDE3600FCB363 /* wheel2.png in Resources */ = {isa = PBXBuildFile; fileRef = 607309D4166CDE3600FCB363 /* wheel2.png */; };
 		607309D7166CE3C800FCB363 /* chassis.png in Resources */ = {isa = PBXBuildFile; fileRef = 607309D6166CE3C800FCB363 /* chassis.png */; };
 		607309DB166CF0EB00FCB363 /* hillPatternNew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 607309DA166CF0EB00FCB363 /* hillPatternNew.jpg */; };
+		60730F64166DEC3600FCB363 /* chassisBW.png in Resources */ = {isa = PBXBuildFile; fileRef = 60730F63166DEC3600FCB363 /* chassisBW.png */; };
+		60730F68166DEDEA00FCB363 /* wheelBW.png in Resources */ = {isa = PBXBuildFile; fileRef = 60730F67166DEDEA00FCB363 /* wheelBW.png */; };
+		60730F6C166DF0C400FCB363 /* forest-texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60730F6B166DF0C400FCB363 /* forest-texture.jpg */; };
+		60730F7C166E460500FCB363 /* foreground.png in Resources */ = {isa = PBXBuildFile; fileRef = 60730F7B166E460500FCB363 /* foreground.png */; };
+		60730F7E166E46A800FCB363 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60730F7D166E46A800FCB363 /* test.jpg */; };
+		60730F80166E4BD000FCB363 /* forest-texture-big.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60730F7F166E4BD000FCB363 /* forest-texture-big.jpg */; };
 		6095A451166A1CBF00AFA105 /* Box2DConfig.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 6095A3EE166A1CBF00AFA105 /* Box2DConfig.cmake */; };
 		6095A452166A1CBF00AFA105 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6095A3EF166A1CBF00AFA105 /* CMakeLists.txt */; };
 		6095A453166A1CBF00AFA105 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6095A3F1166A1CBF00AFA105 /* b2BroadPhase.cpp */; };
@@ -99,6 +105,12 @@
 		607309D4166CDE3600FCB363 /* wheel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wheel2.png; path = ../resources/wheel2.png; sourceTree = "<group>"; };
 		607309D6166CE3C800FCB363 /* chassis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chassis.png; path = ../resources/chassis.png; sourceTree = "<group>"; };
 		607309DA166CF0EB00FCB363 /* hillPatternNew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hillPatternNew.jpg; path = ../resources/hillPatternNew.jpg; sourceTree = "<group>"; };
+		60730F63166DEC3600FCB363 /* chassisBW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chassisBW.png; path = ../resources/chassisBW.png; sourceTree = "<group>"; };
+		60730F67166DEDEA00FCB363 /* wheelBW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wheelBW.png; path = ../resources/wheelBW.png; sourceTree = "<group>"; };
+		60730F6B166DF0C400FCB363 /* forest-texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "forest-texture.jpg"; path = "../resources/forest-texture.jpg"; sourceTree = "<group>"; };
+		60730F7B166E460500FCB363 /* foreground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foreground.png; path = ../resources/foreground.png; sourceTree = "<group>"; };
+		60730F7D166E46A800FCB363 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test.jpg; path = ../resources/test.jpg; sourceTree = "<group>"; };
+		60730F7F166E4BD000FCB363 /* forest-texture-big.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "forest-texture-big.jpg"; path = "../resources/forest-texture-big.jpg"; sourceTree = "<group>"; };
 		6095A3ED166A1CBF00AFA105 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		6095A3EE166A1CBF00AFA105 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
 		6095A3EF166A1CBF00AFA105 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -299,6 +311,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60730F7F166E4BD000FCB363 /* forest-texture-big.jpg */,
+				60730F7D166E46A800FCB363 /* test.jpg */,
+				60730F7B166E460500FCB363 /* foreground.png */,
+				60730F6B166DF0C400FCB363 /* forest-texture.jpg */,
+				60730F67166DEDEA00FCB363 /* wheelBW.png */,
+				60730F63166DEC3600FCB363 /* chassisBW.png */,
 				607309D6166CE3C800FCB363 /* chassis.png */,
 				607309DA166CF0EB00FCB363 /* hillPatternNew.jpg */,
 				607309CC166CD3A300FCB363 /* wheel.jpg */,
@@ -530,6 +548,12 @@
 				607309D5166CDE3600FCB363 /* wheel2.png in Resources */,
 				607309D7166CE3C800FCB363 /* chassis.png in Resources */,
 				607309DB166CF0EB00FCB363 /* hillPatternNew.jpg in Resources */,
+				60730F64166DEC3600FCB363 /* chassisBW.png in Resources */,
+				60730F68166DEDEA00FCB363 /* wheelBW.png in Resources */,
+				60730F6C166DF0C400FCB363 /* forest-texture.jpg in Resources */,
+				60730F7C166E460500FCB363 /* foreground.png in Resources */,
+				60730F7E166E46A800FCB363 /* test.jpg in Resources */,
+				60730F80166E4BD000FCB363 /* forest-texture-big.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

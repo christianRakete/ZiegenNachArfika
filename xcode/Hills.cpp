@@ -58,8 +58,8 @@ void Hills::update(b2Vec2 position){
         }
     }
   
-  console() << mHillsBodyVector.size() << std::endl;
-    
+//  console() << mHillsBodyVector.size() << std::endl;
+  
 }
 
 
@@ -132,7 +132,7 @@ void Hills::draw(){
         
         b2Body* body = mHillsBodyVector.at(i);
 
-        glColor4f(ci::ColorA(1, 1, 1, 1));
+        glColor4f(ci::ColorA(0, 0, 0, 1));
         for (b2Fixture* fixture = body->GetFixtureList(); fixture; fixture = fixture->GetNext()) {
             b2Shape::Type shapeType = fixture->GetType();
             if ( shapeType == b2Shape::e_polygon )
@@ -152,10 +152,10 @@ void Hills::draw(){
                 glEnd();
               
               
-              glPushMatrix();
-                glTranslatef(patternPos.x, patternPos.y+10, 0);
-                gl::draw( hillPattern);
-              gl::popMatrices();
+//              glPushMatrix();
+//                glTranslatef(patternPos.x, patternPos.y+10, 0);
+//                gl::draw( hillPattern);
+//              gl::popMatrices();
               
                 
                 

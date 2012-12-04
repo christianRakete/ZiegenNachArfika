@@ -23,6 +23,8 @@ namespace global {
 	float MIN_BOUNCE = 0.80f; //0.6f;
 	float MAX_BOUNCE	= 0.95f; //.99f;
 	float GRAVITY = .0001;
+  
+  int BG_TEXTURE_WIDTH = 2200;
     
 	int COLOR_SCHEME = 0;
 }

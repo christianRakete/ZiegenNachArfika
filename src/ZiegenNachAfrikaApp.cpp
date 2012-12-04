@@ -39,6 +39,21 @@ class ZiegenNachAfrikaApp : public AppBasic {
   ci::CameraOrtho mCamera;
   
   Car* m_car = new Car(m_world);
+  
+  std::vector <ci::gl::Texture> m_BackgroundTexturesVec;
+  ci::gl::Texture m_ForegroundTexture;
+
+
+  ci::gl::Texture m_BG1Texture;
+  ci::gl::Texture m_BG2Texture;
+  
+  float m_Background1Pos;
+  float m_Background2Pos;
+  float m_bg1Offset;
+  float m_bg2Offset;
+  
+  float m_Center;
+  float m_CenterY;
 
 };
 
@@ -51,7 +66,17 @@ void ZiegenNachAfrikaApp::setup()
 {
     mCamera.setOrtho( 100, getWindowWidth()+100, getWindowHeight(), 0, -1, 1 );
   
+  m_BackgroundTexturesVec.push_back(gl::Texture( loadImage( loadResource( "test.jpg" ) ) ));
     
+  m_ForegroundTexture = gl::Texture( loadImage( loadResource( "foreground.png" ) ) );
+  
+  m_BG1Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+  m_BG2Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+  
+  
+  m_Background1Pos = -global::BG_TEXTURE_WIDTH/2;
+  m_bg1Offset = 0;
+  m_bg2Offset = 0;
     
   b2BodyDef groundBodyDef;
   groundBodyDef.position.Set(-Conversions::toPhysics(200), Conversions::toPhysics(getWindowHeight()-150));
@@ -87,10 +112,10 @@ void ZiegenNachAfrikaApp::setup()
 	fixtureDef.friction = 0.3f;
 	fixtureDef.restitution = 0.5f; // bounce
     
-  p.body->CreateFixture(&fixtureDef);
+//  p.body->CreateFixture(&fixtureDef);
   
 	// rest of initialization particle can do for itself
-  p.setup(Vec2f(boxSizeX, boxSizeY));
+//  p.setup(Vec2f(boxSizeX, boxSizeY));
   
 }
 
@@ -110,10 +135,28 @@ void ZiegenNachAfrikaApp::update() {
     
  float left = Conversions::toScreen(m_car->GetPosition().x) - getWindowWidth()/2;
  float right = Conversions::toScreen(m_car->GetPosition().x) + getWindowWidth()/2;
- float top = Conversions::toScreen(m_car->GetPosition().y) - getWindowHeight()/2;
- float bottom = Conversions::toScreen(m_car->GetPosition().y) + getWindowHeight()/2;
+ float top = 0;
+ float bottom = getWindowHeight();
   
-// mCamera.setOrtho( left, right,bottom, top, -1, 1 );
+  m_Center = Conversions::toScreen(m_car->GetPosition().x);
+  m_CenterY = m_car->GetPosition().y;
+  
+ mCamera.setOrtho( left, right,bottom, top, -1, 1 );
+  
+ m_Background1Pos = m_Center/1.2 - global::BG_TEXTURE_WIDTH/2 + m_bg1Offset * global::BG_TEXTURE_WIDTH;
+ m_Background2Pos = m_Center/1.2 + global::BG_TEXTURE_WIDTH/2 + m_bg2Offset * global::BG_TEXTURE_WIDTH;
+  
+ console() << "camera = " << m_Center << " Texture = " << m_Background1Pos << std::endl;
+  
+  if (m_Center - global::BG_TEXTURE_WIDTH > m_Background1Pos + global::BG_TEXTURE_WIDTH/2) {
+    m_bg1Offset +=2;
+    m_BG1Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+  }
+  
+  if (m_Center - global::BG_TEXTURE_WIDTH > m_Background2Pos + global::BG_TEXTURE_WIDTH/2) {
+    m_bg2Offset +=2;
+    m_BG2Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+  }
   
 
 }
@@ -123,27 +166,38 @@ void ZiegenNachAfrikaApp::draw()
     gl::setMatrices( mCamera );
     gl::enableAlphaBlending();
 	// clear out the window with black
-	gl::clear( Color( 0, 0, 0 ) );
-  p.draw();
-    mHills->draw();
-    gl::drawLine( Vec2f(0, getWindowHeight()), Vec2f(getWindowWidth(), getWindowHeight()));
-//  m_car->draw();
+	gl::clear( Color( 1, 1, 1 ) );
   
-//  debugDraw(true, true);
-//  m_car->draw();
-    debugDraw(true, true);
+  glPushMatrix();
+  gl::translate(Vec2f(m_Background1Pos, m_CenterY));
+    gl::draw(m_BG1Texture);
+  glPopMatrix();
   
-//    Vec2f pos = Conversions::toScreen( m_wheel1->GetPosition() );
-//    float t = Conversions::radiansToDegrees( m_wheel1->GetAngle() );
-//    
-//    glPushMatrix();
-//    gl::translate( pos );
-//    gl::rotate( t );
-//    
-//    Rectf rect(-10, -5, 10, 5);
-//    gl::drawSolidRect(rect);
+  glPushMatrix();
+  gl::translate(Vec2f(m_Background2Pos, m_CenterY));
+  gl::draw(m_BG2Texture);
+  glPopMatrix();
   
-//    glPopMatrix();
+  
+//  glPushMatrix();
+//  gl::translate(Vec2f(m_Center/1.2 + global::BG_TEXTURE_WIDTH/2,0));
+//  gl::draw(m_BackgroundTexturesVec.at(0));
+//  glPopMatrix();
+//  
+//  glPushMatrix();
+//  gl::translate(Vec2f(m_Center/1.+ 2*global::BG_TEXTURE_WIDTH/2,0));
+//  gl::draw(m_BackgroundTexturesVec.at(0));
+//  glPopMatrix();
+
+
+  mHills->draw();
+  gl::drawLine( Vec2f(0, getWindowHeight()), Vec2f(getWindowWidth(), getWindowHeight()));
+  m_car->draw();
+
+  glPushMatrix();
+  gl::translate(Vec2f(0, 10));
+  gl::draw(m_ForegroundTexture);
+  glPopMatrix();
 }
 
 

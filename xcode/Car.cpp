@@ -27,9 +27,9 @@ Car::Car(b2World &world){
   
   m_World = &world;
   
-  m_hz;
-  m_zeta;
-  m_speed;
+  m_hz = 6.0f;
+  m_zeta = 0.9f;
+  m_speed = 40.0f;
   
 
   
@@ -70,7 +70,7 @@ Car::Car(b2World &world){
   b2Vec2 axis(0.0f, 1.0f);
   
   jd.Initialize(m_car, m_leftWheel, m_leftWheel->GetPosition(), axis);
-  jd.motorSpeed = 40.0f;
+  jd.motorSpeed = m_speed;
   jd.maxMotorTorque = 20.0f;
   jd.enableMotor = true;
   jd.frequencyHz = m_hz;
@@ -117,8 +117,8 @@ void Car::draw(){
 
   glPushMatrix();
     b2Fixture* fixtures = m_leftWheel->GetFixtureList();
-    ci::gl::Texture m_wheelTexture = gl::Texture( loadImage( loadResource( "wheel2.png" ) ) );
-    ci::gl::Texture m_chassisTexture = gl::Texture( loadImage( loadResource( "chassis.png" ) ) );
+    ci::gl::Texture m_wheelTexture = gl::Texture( loadImage( loadResource( "wheelBW.png" ) ) );
+    ci::gl::Texture m_chassisTexture = gl::Texture( loadImage( loadResource( "chassisBW.png" ) ) );
     glColor4f(ci::ColorA(1, 1, 1, 1));
     
     Vec2f pos = Conversions::toScreen( m_leftWheel->GetPosition());

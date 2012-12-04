@@ -35,6 +35,8 @@ namespace global {
 	extern float MIN_BOUNCE;
 	extern float MAX_BOUNCE;
 	extern float GRAVITY;
+  
+  extern int BG_TEXTURE_WIDTH;
     
 	extern int COLOR_SCHEME;
 }
