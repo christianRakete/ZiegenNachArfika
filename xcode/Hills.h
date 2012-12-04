@@ -23,12 +23,11 @@ public:
     void create(int yStartHight);
     void draw();
     b2Vec2 computeCentroid(std::vector <b2Vec2> vertices);
-    b2Vec2 computeCentroid2(std::vector<b2Vec2> vertices);
     
     //private:
     // store a pointer to the particle in the physics world from the main app
     std::vector <b2Body*> mHillsBodyVector;
-    float mHillWidth, mHillSliceWidth, mLastHillXPos;
+    float mHillWidth, mHillSliceWidth, mLastHillXPos, mHillStartY;
     int mHillCounter;
     
     ci::Color mColor;

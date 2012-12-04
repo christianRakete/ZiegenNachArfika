@@ -1,6 +1,6 @@
 dependencies: \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/Hills.cpp \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/Hills.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/Hills.cpp \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/Hills.h \
   ../../../include/cinder/Color.h ../../../include/cinder/Cinder.h \
   ../../../boost/boost/cstdint.hpp ../../../boost/boost/config.hpp \
   ../../../boost/boost/config/user.hpp \
@@ -83,43 +83,43 @@ dependencies: \
   ../../../boost/boost/preprocessor/seq/to_tuple.hpp \
   ../../../boost/boost/preprocessor/seq/transform.hpp \
   ../../../include/cinder/Vector.h ../../../include/cinder/CinderMath.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Box2d.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Settings.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Draw.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Math.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Timer.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2CircleShape.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2Shape.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2BlockAllocator.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2Collision.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2EdgeShape.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2ChainShape.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2PolygonShape.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2BroadPhase.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2DynamicTree.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2GrowableStack.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2Distance.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2TimeOfImpact.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2Body.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2Fixture.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2WorldCallbacks.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2TimeStep.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2World.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2StackAllocator.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2ContactManager.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Contacts/b2Contact.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2DistanceJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2Joint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2FrictionJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2GearJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2WheelJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2MouseJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2PulleyJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2RopeJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2WeldJoint.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/Globals.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Box2d.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Settings.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Draw.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Math.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Timer.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2CircleShape.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2Shape.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2BlockAllocator.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2Collision.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2EdgeShape.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2ChainShape.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/Shapes/b2PolygonShape.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2BroadPhase.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2DynamicTree.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2GrowableStack.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2Distance.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2TimeOfImpact.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2Body.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2Fixture.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2WorldCallbacks.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2TimeStep.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2World.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2StackAllocator.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/b2ContactManager.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Contacts/b2Contact.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2DistanceJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2Joint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2FrictionJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2GearJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2WheelJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2MouseJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2PulleyJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2RopeJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Dynamics/Joints/b2WeldJoint.h \
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/Globals.h \
   ../../../include/cinder/Rand.h ../../../boost/boost/random.hpp \
   ../../../boost/boost/random/additive_combine.hpp \
   ../../../boost/boost/random/detail/config.hpp \
@@ -1078,4 +1078,6 @@ dependencies: \
   ../../../include/cinder/app/ResizeEvent.h \
   ../../../include/cinder/Timer.h ../../../include/cinder/Function.h \
   ../../../include/cinder/app/TouchEvent.h \
-  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../include/Conversions.h
+  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../include/Conversions.h \
+  ../../../include/cinder/ImageIo.h ../../../include/cinder/DataTarget.h \
+  ../../../include/cinder/gl/Texture.h

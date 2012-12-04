@@ -18,6 +18,11 @@
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
+		607309AA166CA0DE00FCB363 /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 607309A8166CA0DE00FCB363 /* Car.cpp */; };
+		607309CD166CD3A300FCB363 /* wheel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 607309CC166CD3A300FCB363 /* wheel.jpg */; };
+		607309D5166CDE3600FCB363 /* wheel2.png in Resources */ = {isa = PBXBuildFile; fileRef = 607309D4166CDE3600FCB363 /* wheel2.png */; };
+		607309D7166CE3C800FCB363 /* chassis.png in Resources */ = {isa = PBXBuildFile; fileRef = 607309D6166CE3C800FCB363 /* chassis.png */; };
+		607309DB166CF0EB00FCB363 /* hillPatternNew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 607309DA166CF0EB00FCB363 /* hillPatternNew.jpg */; };
 		6095A451166A1CBF00AFA105 /* Box2DConfig.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 6095A3EE166A1CBF00AFA105 /* Box2DConfig.cmake */; };
 		6095A452166A1CBF00AFA105 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6095A3EF166A1CBF00AFA105 /* CMakeLists.txt */; };
 		6095A453166A1CBF00AFA105 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6095A3F1166A1CBF00AFA105 /* b2BroadPhase.cpp */; };
@@ -88,6 +93,12 @@
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		607309A8166CA0DE00FCB363 /* Car.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
+		607309A9166CA0DE00FCB363 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		607309CC166CD3A300FCB363 /* wheel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wheel.jpg; path = ../resources/wheel.jpg; sourceTree = "<group>"; };
+		607309D4166CDE3600FCB363 /* wheel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wheel2.png; path = ../resources/wheel2.png; sourceTree = "<group>"; };
+		607309D6166CE3C800FCB363 /* chassis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chassis.png; path = ../resources/chassis.png; sourceTree = "<group>"; };
+		607309DA166CF0EB00FCB363 /* hillPatternNew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hillPatternNew.jpg; path = ../resources/hillPatternNew.jpg; sourceTree = "<group>"; };
 		6095A3ED166A1CBF00AFA105 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		6095A3EE166A1CBF00AFA105 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
 		6095A3EF166A1CBF00AFA105 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -217,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				00BAE6590E7ED9C10018A608 /* ZiegenNachAfrikaApp.cpp */,
+				607309A8166CA0DE00FCB363 /* Car.cpp */,
 				6095A482166A2A1500AFA105 /* Particle.cpp */,
 				6095A488166B59D700AFA105 /* Hills.cpp */,
 				6095A485166A2A8F00AFA105 /* Globals.cpp */,
@@ -279,6 +291,7 @@
 				6095A481166A29EA00AFA105 /* Particle.h */,
 				6095A487166B595A00AFA105 /* Hills.h */,
 				6095A484166A2A6B00AFA105 /* Globals.h */,
+				607309A9166CA0DE00FCB363 /* Car.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -286,6 +299,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				607309D6166CE3C800FCB363 /* chassis.png */,
+				607309DA166CF0EB00FCB363 /* hillPatternNew.jpg */,
+				607309CC166CD3A300FCB363 /* wheel.jpg */,
+				607309D4166CDE3600FCB363 /* wheel2.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
 			);
@@ -509,6 +526,10 @@
 				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
 				6095A451166A1CBF00AFA105 /* Box2DConfig.cmake in Resources */,
 				6095A452166A1CBF00AFA105 /* CMakeLists.txt in Resources */,
+				607309CD166CD3A300FCB363 /* wheel.jpg in Resources */,
+				607309D5166CDE3600FCB363 /* wheel2.png in Resources */,
+				607309D7166CE3C800FCB363 /* chassis.png in Resources */,
+				607309DB166CF0EB00FCB363 /* hillPatternNew.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +589,7 @@
 				6095A483166A2A1500AFA105 /* Particle.cpp in Sources */,
 				6095A486166A2A8F00AFA105 /* Globals.cpp in Sources */,
 				6095A489166B59D700AFA105 /* Hills.cpp in Sources */,
+				607309AA166CA0DE00FCB363 /* Car.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
