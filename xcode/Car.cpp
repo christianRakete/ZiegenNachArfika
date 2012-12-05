@@ -23,9 +23,12 @@
 using namespace ci;
 using namespace ci::app;
 
-Car::Car(b2World &world){
+Car::Car(b2World &world, b2Vec2 position){
   
   m_World = &world;
+  
+  float xOffset = Conversions::toPhysics(position.x);
+  float yOffset = Conversions::toPhysics(position.y);
   
   m_hz = 6.0f;
   m_zeta = 0.9f;
@@ -48,7 +51,7 @@ Car::Car(b2World &world){
   
   b2BodyDef bd;
   bd.type = b2_dynamicBody;
-  bd.position.Set(0.0f, 1.0f);
+  bd.position.Set(0.0f + xOffset, 1.0f + yOffset);
   m_car = m_World->CreateBody(&bd);
   m_car->CreateFixture(&chassis, 1.0f);
   
@@ -58,11 +61,11 @@ Car::Car(b2World &world){
   fd.friction = 1.0f;
   
   
-  bd.position.Set(-1.4f, 1.8f);
+  bd.position.Set(-1.4f+xOffset, 1.8f+yOffset);
   m_leftWheel = m_World->CreateBody(&bd);
   m_leftWheel->CreateFixture(&fd);
   
-  bd.position.Set(1.4f, 1.8f);
+  bd.position.Set(1.4f+xOffset, 1.8f+yOffset);
   m_rightWheel = m_World->CreateBody(&bd);
   m_rightWheel->CreateFixture(&fd);
   

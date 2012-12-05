@@ -16,7 +16,7 @@
 
 class Car {
 public:
-  Car(b2World &world);
+  Car(b2World &world, b2Vec2 position);
   ~Car();
   
   // pass in a pointer to the particle

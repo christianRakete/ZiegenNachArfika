@@ -19,8 +19,7 @@ using namespace ci::app;
 using namespace std;
 
 b2Vec2 gravity(0.0f, 10.0f);
-b2World m_world(gravity);
-
+b2World m_World(gravity);
 
 class ZiegenNachAfrikaApp : public AppBasic {
   public:
@@ -30,15 +29,15 @@ class ZiegenNachAfrikaApp : public AppBasic {
 	void update();
 	void draw();
   void debugDraw( bool drawBodies, bool drawContacts );
-  
+    
   gl::Texture m_wheelTexture;
 
     
   Particle p = Particle();
-  Hills* mHills = new Hills(m_world);
+  Hills* m_Hills;
   ci::CameraOrtho mCamera;
   
-  Car* m_car = new Car(m_world);
+  Car* m_Car;
   
   std::vector <ci::gl::Texture> m_BackgroundTexturesVec;
   ci::gl::Texture m_ForegroundTexture;
@@ -64,54 +63,65 @@ void ZiegenNachAfrikaApp::mouseMove( MouseEvent event ) {
 
 void ZiegenNachAfrikaApp::setup()
 {
-    mCamera.setOrtho( 100, getWindowWidth()+100, getWindowHeight(), 0, -1, 1 );
+  ////// Box2d Setup
   
-  m_BackgroundTexturesVec.push_back(gl::Texture( loadImage( loadResource( "test.jpg" ) ) ));
-    
-  m_ForegroundTexture = gl::Texture( loadImage( loadResource( "foreground.png" ) ) );
-  
-  m_BG1Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
-  m_BG2Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+  m_Hills = new Hills(m_World);
+  m_Car = new Car(m_World, b2Vec2(400, 100));
   
   
-  m_Background1Pos = -global::BG_TEXTURE_WIDTH/2;
-  m_bg1Offset = 0;
-  m_bg2Offset = 0;
-    
-  b2BodyDef groundBodyDef;
-  groundBodyDef.position.Set(-Conversions::toPhysics(200), Conversions::toPhysics(getWindowHeight()-150));
-    
-  b2Body* groundBody = m_world.CreateBody(&groundBodyDef);
-    
-  b2PolygonShape groundBox;
-	groundBox.SetAsBox(Conversions::toPhysics(app::getWindowWidth()), Conversions::toPhysics(1.0f)); // size the ground
-    
-	// 4. create fixture on body
-	groundBody->CreateFixture(&groundBox, 0.0f);
-        
-	// create a dynamic body
-	b2BodyDef bodyDef;
-	bodyDef.type = b2_dynamicBody;
-	bodyDef.position.Set(Conversions::toPhysics(320), Conversions::toPhysics(200));
-    
-	// instead of just creating body...
-	// b2Body* body = world->CreateBody(&bodyDef);
-	// do the following to create it with a circular reference to it's corresponding particle
-	bodyDef.userData = &p;
-  p.body = m_world.CreateBody(&bodyDef);
+  ////// Camera Setup
   
-	b2PolygonShape dynamicBox;
-	float boxSizeX = Rand::randFloat(global::BOX_X_MIN, global::BOX_X_MAX);
-	float boxSizeY = Rand::randFloat(global::BOX_Y_MIN, global::BOX_Y_MAX);
-    
-	dynamicBox.SetAsBox(Conversions::toPhysics(boxSizeX), Conversions::toPhysics(boxSizeY));
-    
-	b2FixtureDef fixtureDef;
-	fixtureDef.shape = &dynamicBox;
-	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.3f;
-	fixtureDef.restitution = 0.5f; // bounce
-    
+  mCamera.setOrtho( 100, getWindowWidth()+100, getWindowHeight(), 0, -1, 1 );
+  
+  
+//  ////// Textures Setup
+//  
+//  m_BackgroundTexturesVec.push_back(gl::Texture( loadImage( loadResource( "test.jpg" ) ) ));
+//    
+//  m_ForegroundTexture = gl::Texture( loadImage( loadResource( "foreground.png" ) ) );
+//  
+//  m_BG1Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+//  m_BG2Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+//  
+//  
+//  m_Background1Pos = -global::BG_TEXTURE_WIDTH/2;
+//  m_bg1Offset = 0;
+//  m_bg2Offset = 0;
+//    
+//  b2BodyDef groundBodyDef;
+//  groundBodyDef.position.Set(-Conversions::toPhysics(200), Conversions::toPhysics(getWindowHeight()-150));
+//    
+//  b2Body* groundBody = m_World.CreateBody(&groundBodyDef);
+//    
+//  b2PolygonShape groundBox;
+//	groundBox.SetAsBox(Conversions::toPhysics(app::getWindowWidth()), Conversions::toPhysics(1.0f)); // size the ground
+//    
+//	// 4. create fixture on body
+//	groundBody->CreateFixture(&groundBox, 0.0f);
+//        
+//	// create a dynamic body
+//	b2BodyDef bodyDef;
+//	bodyDef.type = b2_dynamicBody;
+//	bodyDef.position.Set(Conversions::toPhysics(320), Conversions::toPhysics(200));
+//    
+//	// instead of just creating body...
+//	// b2Body* body = world->CreateBody(&bodyDef);
+//	// do the following to create it with a circular reference to it's corresponding particle
+//	bodyDef.userData = &p;
+//  p.body = m_World.CreateBody(&bodyDef);
+//  
+//	b2PolygonShape dynamicBox;
+//	float boxSizeX = Rand::randFloat(global::BOX_X_MIN, global::BOX_X_MAX);
+//	float boxSizeY = Rand::randFloat(global::BOX_Y_MIN, global::BOX_Y_MAX);
+//    
+//	dynamicBox.SetAsBox(Conversions::toPhysics(boxSizeX), Conversions::toPhysics(boxSizeY));
+//    
+//	b2FixtureDef fixtureDef;
+//	fixtureDef.shape = &dynamicBox;
+//	fixtureDef.density = 1.0f;
+//	fixtureDef.friction = 0.3f;
+//	fixtureDef.restitution = 0.5f; // bounce
+  
 //  p.body->CreateFixture(&fixtureDef);
   
 	// rest of initialization particle can do for itself
@@ -128,55 +138,59 @@ void ZiegenNachAfrikaApp::update() {
 	float32 timeStep = 1.0f / 60.0f;
 	int32 velocityIterations = 6;
 	int32 positionIterations = 2;
-  mHills->update(m_car->GetPosition());
-    
-	m_world.Step(timeStep, velocityIterations, positionIterations);
+  m_Hills->update(m_Car->GetPosition());
+  
+	m_World.Step(timeStep, velocityIterations, positionIterations);
   
     
- float left = Conversions::toScreen(m_car->GetPosition().x) - getWindowWidth()/2;
- float right = Conversions::toScreen(m_car->GetPosition().x) + getWindowWidth()/2;
+ float left = Conversions::toScreen(m_Car->GetPosition().x) - getWindowWidth()/2;
+ float right = Conversions::toScreen(m_Car->GetPosition().x) + getWindowWidth()/2;
  float top = 0;
  float bottom = getWindowHeight();
   
-  m_Center = Conversions::toScreen(m_car->GetPosition().x);
-  m_CenterY = m_car->GetPosition().y;
+  m_Center = Conversions::toScreen(m_Car->GetPosition().x);
+  m_CenterY = m_Car->GetPosition().y;
   
  mCamera.setOrtho( left, right,bottom, top, -1, 1 );
   
- m_Background1Pos = m_Center/1.2 - global::BG_TEXTURE_WIDTH/2 + m_bg1Offset * global::BG_TEXTURE_WIDTH;
- m_Background2Pos = m_Center/1.2 + global::BG_TEXTURE_WIDTH/2 + m_bg2Offset * global::BG_TEXTURE_WIDTH;
-  
- console() << "camera = " << m_Center << " Texture = " << m_Background1Pos << std::endl;
-  
-  if (m_Center - global::BG_TEXTURE_WIDTH > m_Background1Pos + global::BG_TEXTURE_WIDTH/2) {
-    m_bg1Offset +=2;
-    m_BG1Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
-  }
-  
-  if (m_Center - global::BG_TEXTURE_WIDTH > m_Background2Pos + global::BG_TEXTURE_WIDTH/2) {
-    m_bg2Offset +=2;
-    m_BG2Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
-  }
-  
+// m_Background1Pos = m_Center/1.2 - global::BG_TEXTURE_WIDTH/2 + m_bg1Offset * global::BG_TEXTURE_WIDTH;
+// m_Background2Pos = m_Center/1.2 + global::BG_TEXTURE_WIDTH/2 + m_bg2Offset * global::BG_TEXTURE_WIDTH;
+//  
+// console() << "camera = " << m_Center << " Texture = " << m_Background1Pos << std::endl;
+//  
+//  if (m_Center - global::BG_TEXTURE_WIDTH > m_Background1Pos + global::BG_TEXTURE_WIDTH/2) {
+//    m_bg1Offset +=2;
+//    m_BG1Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+//  }
+//  
+//  if (m_Center - global::BG_TEXTURE_WIDTH > m_Background2Pos + global::BG_TEXTURE_WIDTH/2) {
+//    m_bg2Offset +=2;
+//    m_BG2Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
+//  }
+//  
 
 }
 
 void ZiegenNachAfrikaApp::draw()
 {
-    gl::setMatrices( mCamera );
-    gl::enableAlphaBlending();
-	// clear out the window with black
-	gl::clear( Color( 1, 1, 1 ) );
   
-  glPushMatrix();
-  gl::translate(Vec2f(m_Background1Pos, m_CenterY));
-    gl::draw(m_BG1Texture);
-  glPopMatrix();
+  //////
   
-  glPushMatrix();
-  gl::translate(Vec2f(m_Background2Pos, m_CenterY));
-  gl::draw(m_BG2Texture);
-  glPopMatrix();
+  gl::setMatrices( mCamera );
+  gl::enableAlphaBlending();
+	gl::clear( Color( 0, 0, 0 ) );
+  
+  
+  
+//  glPushMatrix();
+//  gl::translate(Vec2f(m_Background1Pos, m_CenterY));
+//    gl::draw(m_BG1Texture);
+//  glPopMatrix();
+//  
+//  glPushMatrix();
+//  gl::translate(Vec2f(m_Background2Pos, m_CenterY));
+//  gl::draw(m_BG2Texture);
+//  glPopMatrix();
   
   
 //  glPushMatrix();
@@ -190,14 +204,16 @@ void ZiegenNachAfrikaApp::draw()
 //  glPopMatrix();
 
 
-  mHills->draw();
-  gl::drawLine( Vec2f(0, getWindowHeight()), Vec2f(getWindowWidth(), getWindowHeight()));
-  m_car->draw();
+  m_Hills->draw();
+  m_Car->draw();
+  
+//  gl::drawLine( Vec2f(0, getWindowHeight()), Vec2f(getWindowWidth(), getWindowHeight()));
+  
 
-  glPushMatrix();
-  gl::translate(Vec2f(0, 10));
-  gl::draw(m_ForegroundTexture);
-  glPopMatrix();
+//  glPushMatrix();
+//  gl::translate(Vec2f(0, 10));
+//  gl::draw(m_ForegroundTexture);
+//  glPopMatrix();
 }
 
 
@@ -212,7 +228,7 @@ void ZiegenNachAfrikaApp::debugDraw( bool drawBodies, bool drawContacts )
 		gl::color( ColorA(1.0f, 0.0f, 0.1f, 0.5f) );
     
 		//draw bodies
-		b2Body* bodies = m_world.GetBodyList();
+		b2Body* bodies = m_World.GetBodyList();
 		while( bodies != NULL )
 		{
 			b2Vec2 pos = bodies->GetPosition();
@@ -267,7 +283,7 @@ void ZiegenNachAfrikaApp::debugDraw( bool drawBodies, bool drawContacts )
 	if( drawContacts )
 	{
 		//draw contacts
-		b2Contact* contacts = m_world.GetContactList();
+		b2Contact* contacts = m_World.GetContactList();
     
 		gl::color( ColorA( 0.0f, 0.0f, 1.0f, 0.8f ) );
 		glPointSize(3.0f);

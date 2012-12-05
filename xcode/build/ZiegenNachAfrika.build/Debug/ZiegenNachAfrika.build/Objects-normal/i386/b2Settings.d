@@ -1,3 +1,3 @@
 dependencies: \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Settings.cpp \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Settings.h
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Settings.cpp \
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Settings.h

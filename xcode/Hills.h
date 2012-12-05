@@ -26,13 +26,14 @@ public:
     
     //private:
     // store a pointer to the particle in the physics world from the main app
-    std::vector <b2Body*> mHillsBodyVector;
-    float mHillWidth, mHillSliceWidth, mLastHillXPos, mHillStartY;
-    int mHillCounter;
+    std::vector <b2Body*> m_HillsBodyVector;
+    std::vector <std::pair <b2Vec2, b2Vec2> > m_HillsPolygonVector;
+    float m_HillWidth, m_HillSliceWidth, m_LastHillXPos, m_HillStartY;
+    int m_HillCounter;
     
-    ci::Color mColor;
+    ci::Color m_Color;
     
-    b2World *mWorld;
+    b2World *m_World;
     
 };
 

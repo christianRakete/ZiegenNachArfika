@@ -18,6 +18,7 @@
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
+		60474DE3166EB47E00EF5A69 /* texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60474DE2166EB47E00EF5A69 /* texture.jpg */; };
 		607309AA166CA0DE00FCB363 /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 607309A8166CA0DE00FCB363 /* Car.cpp */; };
 		607309CD166CD3A300FCB363 /* wheel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 607309CC166CD3A300FCB363 /* wheel.jpg */; };
 		607309D5166CDE3600FCB363 /* wheel2.png in Resources */ = {isa = PBXBuildFile; fileRef = 607309D4166CDE3600FCB363 /* wheel2.png */; };
@@ -99,6 +100,7 @@
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		60474DE2166EB47E00EF5A69 /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = texture.jpg; path = ../resources/texture.jpg; sourceTree = "<group>"; };
 		607309A8166CA0DE00FCB363 /* Car.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
 		607309A9166CA0DE00FCB363 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		607309CC166CD3A300FCB363 /* wheel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wheel.jpg; path = ../resources/wheel.jpg; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60474DE2166EB47E00EF5A69 /* texture.jpg */,
 				60730F7F166E4BD000FCB363 /* forest-texture-big.jpg */,
 				60730F7D166E46A800FCB363 /* test.jpg */,
 				60730F7B166E460500FCB363 /* foreground.png */,
@@ -554,6 +557,7 @@
 				60730F7C166E460500FCB363 /* foreground.png in Resources */,
 				60730F7E166E46A800FCB363 /* test.jpg in Resources */,
 				60730F80166E4BD000FCB363 /* forest-texture-big.jpg in Resources */,
+				60474DE3166EB47E00EF5A69 /* texture.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

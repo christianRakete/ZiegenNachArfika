@@ -1,8 +1,8 @@
 dependencies: \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2BroadPhase.cpp \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2BroadPhase.h \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Settings.h \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2Collision.h \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Math.h \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2DynamicTree.h \
-  /Development/cinder_master/blocks/ZiegenNachArfika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2GrowableStack.h
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2BroadPhase.cpp \
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2BroadPhase.h \
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Settings.h \
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2Collision.h \
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2Math.h \
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Collision/b2DynamicTree.h \
+  /development/cinder-master/blocks/ZiegenNachAfrika/xcode/../../../../Box2D_v2.2.1/Box2D/Common/b2GrowableStack.h
