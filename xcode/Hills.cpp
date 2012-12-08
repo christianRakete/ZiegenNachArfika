@@ -84,7 +84,7 @@ void Hills::create(int yStartHight){
   
   float hillStartY = yStartHight;
   
-  float randomHeight =  Rand::randFloat( 0.0f, 70.0f );
+  float randomHeight =  Rand::randFloat( 0.0f, 100.0f );
   
   if(m_HillCounter > 0){
     m_HillStartY -= randomHeight;

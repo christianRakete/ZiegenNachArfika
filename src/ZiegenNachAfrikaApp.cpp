@@ -1,9 +1,10 @@
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Rand.h"
+#include "cinder/Timer.h"
 #include "Box2D/Box2d.h"
 #include "cinder/Camera.h"
-
+#include <cmath>
 
 #include "Conversions.h"
 #include "Globals.h"
@@ -53,6 +54,15 @@ class ZiegenNachAfrikaApp : public AppBasic {
   
   float m_Center;
   float m_CenterY;
+  
+  float m_CarVelocity;
+  
+  float mResetCounter;
+  
+  Vec2f m_oldPosition;
+  
+  Timer m_ResetTimer;
+  bool m_ResetTimerRunning;
 
 };
 
@@ -69,25 +79,31 @@ void ZiegenNachAfrikaApp::setup()
   m_Car = new Car(m_World, b2Vec2(400, 100));
   
   
-  ////// Camera Setup
+  mResetCounter = 420;
   
-  mCamera.setOrtho( 100, getWindowWidth()+100, getWindowHeight(), 0, -1, 1 );
+  m_ResetTimer = new Timer();
+  m_ResetTimerRunning = false;
+  
+  ////// Camera Setup
+
+  mCamera.setOrtho( 700, getWindowWidth()+700, getWindowHeight(), 0, -1, 1 );
   
   
 //  ////// Textures Setup
 //  
-//  m_BackgroundTexturesVec.push_back(gl::Texture( loadImage( loadResource( "test.jpg" ) ) ));
-//    
+//  m_BackgroundTexturesVec.push_back(gl::Texture( loadImage( loadResource( "background-2-1.png" ) ) ));
+//  m_BackgroundTexturesVec.push_back(gl::Texture( loadImage( loadResource( "background-2-2.png" ) ) ));
+//
 //  m_ForegroundTexture = gl::Texture( loadImage( loadResource( "foreground.png" ) ) );
 //  
 //  m_BG1Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
 //  m_BG2Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
-//  
+//
 //  
 //  m_Background1Pos = -global::BG_TEXTURE_WIDTH/2;
 //  m_bg1Offset = 0;
 //  m_bg2Offset = 0;
-//    
+//
 //  b2BodyDef groundBodyDef;
 //  groundBodyDef.position.Set(-Conversions::toPhysics(200), Conversions::toPhysics(getWindowHeight()-150));
 //    
@@ -142,22 +158,36 @@ void ZiegenNachAfrikaApp::update() {
   
 	m_World.Step(timeStep, velocityIterations, positionIterations);
   
-    
- float left = Conversions::toScreen(m_Car->GetPosition().x) - getWindowWidth()/2;
- float right = Conversions::toScreen(m_Car->GetPosition().x) + getWindowWidth()/2;
- float top = 0;
- float bottom = getWindowHeight();
+//  0.2 * Conversions::toScreen(m_Car->GetPosition().x) - 0.8 * m_Center;
+//  console() << smoothCameraOffset << "vec = " << m_CameraVector.x << std::endl;
   
-  m_Center = Conversions::toScreen(m_Car->GetPosition().x);
+  
+  float newCarPosX = Conversions::toScreen(m_Car->GetPosition().x);
+
+  
+//  m_SmoothCarSpeed =  0.9 * m_SmoothCarSpeed - 0.1 * speed;
+  
+  m_Center = newCarPosX;
   m_CenterY = m_Car->GetPosition().y;
   
- mCamera.setOrtho( left, right,bottom, top, -1, 1 );
+  
+  m_CarVelocity = (m_Car->getBody()->GetLinearVelocity().x * 10) * 0.1 + m_CarVelocity * 0.9;
+    
+  
+  float left = m_Center - m_CarVelocity  +300 - getWindowWidth()/2;
+  float right = m_Center - m_CarVelocity +300 + getWindowWidth()/2;
+  float top = 0;
+  float bottom = getWindowHeight();
+  
+  Vec2f pos = Conversions::toScreen(m_Car->GetPosition());
+  
+  mCamera.setOrtho( left, right,bottom, top, -1, 1 );
   
 // m_Background1Pos = m_Center/1.2 - global::BG_TEXTURE_WIDTH/2 + m_bg1Offset * global::BG_TEXTURE_WIDTH;
 // m_Background2Pos = m_Center/1.2 + global::BG_TEXTURE_WIDTH/2 + m_bg2Offset * global::BG_TEXTURE_WIDTH;
-//  
-// console() << "camera = " << m_Center << " Texture = " << m_Background1Pos << std::endl;
-//  
+////
+//// console() << "camera = " << m_Center << " Texture = " << m_Background1Pos << std::endl;
+////  
 //  if (m_Center - global::BG_TEXTURE_WIDTH > m_Background1Pos + global::BG_TEXTURE_WIDTH/2) {
 //    m_bg1Offset +=2;
 //    m_BG1Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
@@ -167,7 +197,27 @@ void ZiegenNachAfrikaApp::update() {
 //    m_bg2Offset +=2;
 //    m_BG2Texture = m_BackgroundTexturesVec.at(Rand::randInt( 0, m_BackgroundTexturesVec.size()));
 //  }
-//  
+////
+  
+  float xrange = sqrt((pos.x - m_oldPosition.x) * (pos.x - m_oldPosition.x));
+  float yrange = sqrt((pos.y - m_oldPosition.y) * (pos.y - m_oldPosition.y));
+  
+  if (xrange < 4 && yrange < 4 && pos.x  > mResetCounter && m_ResetTimer.isStopped()) {
+    m_ResetTimer.start();
+  }
+  
+  if (xrange < 4 && yrange < 4 && pos.x  > mResetCounter && m_ResetTimer.getSeconds() > 10) {
+    m_Car->DestroyBody();
+    m_Car = new Car(m_World, b2Vec2(pos.x, 100));
+    mResetCounter = m_Center + 420;
+    m_ResetTimer.stop();
+  
+  } else if  (m_ResetTimer.getSeconds() > 10){
+    m_ResetTimer.stop();
+  }
+  
+  
+  m_oldPosition = Conversions::toScreen(m_Car->GetPosition());
 
 }
 
@@ -181,7 +231,7 @@ void ZiegenNachAfrikaApp::draw()
 	gl::clear( Color( 0, 0, 0 ) );
   
   
-  
+//  
 //  glPushMatrix();
 //  gl::translate(Vec2f(m_Background1Pos, m_CenterY));
 //    gl::draw(m_BG1Texture);
@@ -204,8 +254,8 @@ void ZiegenNachAfrikaApp::draw()
 //  glPopMatrix();
 
 
-  m_Hills->draw();
   m_Car->draw();
+  m_Hills->draw();
   
 //  gl::drawLine( Vec2f(0, getWindowHeight()), Vec2f(getWindowWidth(), getWindowHeight()));
   
@@ -214,6 +264,7 @@ void ZiegenNachAfrikaApp::draw()
 //  gl::translate(Vec2f(0, 10));
 //  gl::draw(m_ForegroundTexture);
 //  glPopMatrix();
+//  debugDraw(true, true);
 }
 
 

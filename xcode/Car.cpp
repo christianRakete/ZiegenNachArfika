@@ -32,19 +32,21 @@ Car::Car(b2World &world, b2Vec2 position){
   
   m_hz = 6.0f;
   m_zeta = 0.9f;
-  m_speed = 40.0f;
+  m_speed = 50.0f;
+//  m_speed = 0.0f;
   
 
   
   b2PolygonShape chassis;
   b2Vec2 vertices[8];
-  vertices[0].Set(-2.0f, 0.5f);
-  vertices[5].Set(2.0f, 0.5f);
-  vertices[4].Set(2.0f, 0.0f);
-  vertices[3].Set(0.0f, -0.9f);
-  vertices[2].Set(-1.85f, -0.9f);
-  vertices[1].Set(-2.0f, -0.2f);
-  chassis.Set(vertices, 6);
+  vertices[0].Set(-2.2f, 0.5f);
+  vertices[6].Set(2.18f, 0.5f);
+  vertices[5].Set(2.23f, 0.35f);
+  vertices[4].Set(2.0f, -0.1f);
+  vertices[3].Set(0.3f, -0.9f);
+  vertices[2].Set(-0.85f, -0.9f);
+  vertices[1].Set(-1.9f, -0.2f);
+  chassis.Set(vertices, 7);
   
   b2CircleShape circle;
   circle.m_radius = 0.4f;
@@ -55,17 +57,30 @@ Car::Car(b2World &world, b2Vec2 position){
   m_car = m_World->CreateBody(&bd);
   m_car->CreateFixture(&chassis, 1.0f);
   
+  
+  b2PolygonShape tree;
+  b2Vec2 vertices2[8];
+  vertices2[0].Set(1.2f, 0.0f);
+  vertices2[1].Set(-2.5f, 0.0f);
+  vertices2[2].Set(-0.5f, -0.1f);
+  tree.Set(vertices2, 3);
+  
+  bd.position.Set(0.4f + xOffset, -0.0f + yOffset);
+  m_tree = m_World->CreateBody(&bd);
+  m_tree->CreateFixture(&tree, 1.0f);
+  
+  
   b2FixtureDef fd;
   fd.shape = &circle;
   fd.density = 1.0f;
   fd.friction = 1.0f;
   
   
-  bd.position.Set(-1.4f+xOffset, 1.8f+yOffset);
+  bd.position.Set(-1.25f+xOffset, 1.5f+yOffset);
   m_leftWheel = m_World->CreateBody(&bd);
   m_leftWheel->CreateFixture(&fd);
   
-  bd.position.Set(1.4f+xOffset, 1.8f+yOffset);
+  bd.position.Set(1.58f+xOffset, 1.5f+yOffset);
   m_rightWheel = m_World->CreateBody(&bd);
   m_rightWheel->CreateFixture(&fd);
   
@@ -81,12 +96,25 @@ Car::Car(b2World &world, b2Vec2 position){
   m_spring1 = (b2WheelJoint*)m_World->CreateJoint(&jd);
   
   jd.Initialize(m_car, m_rightWheel, m_rightWheel->GetPosition(), axis);
-  jd.motorSpeed = 0.0f;
+  jd.motorSpeed = m_speed/2;
   jd.maxMotorTorque = 10.0f;
-  jd.enableMotor = false;
+  jd.enableMotor = true;
   jd.frequencyHz = m_hz;
   jd.dampingRatio = m_zeta;
   m_spring2 = (b2WheelJoint*)m_World->CreateJoint(&jd);
+  
+  b2WheelJointDef jd2;
+  b2Vec2 axis2(0.0f, -1.0f);
+  
+  jd2.Initialize(m_car, m_tree, m_car->GetPosition(), axis2);
+  jd2.enableMotor = false;
+  jd2.frequencyHz = m_hz;
+  jd2.dampingRatio = m_zeta;
+  m_spring3 = (b2WheelJoint*)m_World->CreateJoint(&jd2);
+  
+  jd2.Initialize(m_car, m_tree, b2Vec2(m_car->GetPosition().x-1, m_car->GetPosition().y), axis2);
+  (b2WheelJoint*)m_World->CreateJoint(&jd2);
+  
 
 }
 
@@ -95,6 +123,18 @@ Car::~Car(){
 
 b2Vec2 Car::GetPosition(){
   return m_car->GetPosition();
+}
+
+void Car::DestroyBody(){
+  m_World->DestroyBody(m_rightWheel);
+  m_World->DestroyBody(m_leftWheel);
+  m_World->DestroyBody(m_car);
+  m_World->DestroyBody(m_tree);
+}
+
+
+b2Body* Car::getBody() {
+  return m_car;
 }
 
 void Car::update(){}
@@ -120,8 +160,9 @@ void Car::draw(){
 
   glPushMatrix();
     b2Fixture* fixtures = m_leftWheel->GetFixtureList();
-    ci::gl::Texture m_wheelTexture = gl::Texture( loadImage( loadResource( "wheelBW.png" ) ) );
-    ci::gl::Texture m_chassisTexture = gl::Texture( loadImage( loadResource( "chassisBW.png" ) ) );
+    ci::gl::Texture m_wheelTexture = gl::Texture( loadImage( loadResource( "wheelVW.png" ) ) );
+    ci::gl::Texture m_chassisTexture = gl::Texture( loadImage( loadResource( "chassisVW.png" ) ) );
+    ci::gl::Texture m_treeTexture = gl::Texture( loadImage( loadResource( "tree.png" ) ) );
     glColor4f(ci::ColorA(1, 1, 1, 1));
     
     Vec2f pos = Conversions::toScreen( m_leftWheel->GetPosition());
@@ -160,6 +201,14 @@ void Car::draw(){
     glRotatef(Conversions::radiansToDegrees( m_car->GetAngle()),0, 0, 1);
     glTranslatef(-228/2, -94/2, 0);
     gl::draw( m_chassisTexture);
+  gl::popMatrices();
+  
+  glPushMatrix();
+    pos = Conversions::toScreen( m_tree->GetPosition());
+    glTranslatef(pos.x, pos.y, 0);
+    glRotatef(Conversions::radiansToDegrees( m_tree->GetAngle()),0, 0, 1);
+    glTranslatef(-350/2, -194/2, 0);
+    gl::draw( m_treeTexture);
   gl::popMatrices();
 
 

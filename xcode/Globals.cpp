@@ -24,7 +24,7 @@ namespace global {
 	float MAX_BOUNCE	= 0.95f; //.99f;
 	float GRAVITY = .0001;
   
-  int BG_TEXTURE_WIDTH = 2200;
+  int BG_TEXTURE_WIDTH = 2560;
     
 	int COLOR_SCHEME = 0;
 }

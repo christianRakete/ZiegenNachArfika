@@ -18,6 +18,11 @@
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
+		601220731670D3FF0084B611 /* chassisVW.png in Resources */ = {isa = PBXBuildFile; fileRef = 601220721670D3FF0084B611 /* chassisVW.png */; };
+		601220751670D5F80084B611 /* wheelVW.png in Resources */ = {isa = PBXBuildFile; fileRef = 601220741670D5F80084B611 /* wheelVW.png */; };
+		601220771670DC3B0084B611 /* background-2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 601220761670DC3B0084B611 /* background-2-1.png */; };
+		601220791670E1F80084B611 /* background-2-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 601220781670E1F80084B611 /* background-2-2.png */; };
+		6012207B1670EDC80084B611 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 6012207A1670EDC80084B611 /* tree.png */; };
 		60474DE3166EB47E00EF5A69 /* texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60474DE2166EB47E00EF5A69 /* texture.jpg */; };
 		607309AA166CA0DE00FCB363 /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 607309A8166CA0DE00FCB363 /* Car.cpp */; };
 		607309CD166CD3A300FCB363 /* wheel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 607309CC166CD3A300FCB363 /* wheel.jpg */; };
@@ -100,6 +105,11 @@
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		601220721670D3FF0084B611 /* chassisVW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chassisVW.png; path = ../resources/chassisVW.png; sourceTree = "<group>"; };
+		601220741670D5F80084B611 /* wheelVW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wheelVW.png; path = ../resources/wheelVW.png; sourceTree = "<group>"; };
+		601220761670DC3B0084B611 /* background-2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-2-1.png"; path = "../resources/background-2-1.png"; sourceTree = "<group>"; };
+		601220781670E1F80084B611 /* background-2-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-2-2.png"; path = "../resources/background-2-2.png"; sourceTree = "<group>"; };
+		6012207A1670EDC80084B611 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tree.png; path = ../resources/tree.png; sourceTree = "<group>"; };
 		60474DE2166EB47E00EF5A69 /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = texture.jpg; path = ../resources/texture.jpg; sourceTree = "<group>"; };
 		607309A8166CA0DE00FCB363 /* Car.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
 		607309A9166CA0DE00FCB363 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
@@ -313,6 +323,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				601220761670DC3B0084B611 /* background-2-1.png */,
+				601220781670E1F80084B611 /* background-2-2.png */,
+				6012207A1670EDC80084B611 /* tree.png */,
+				601220741670D5F80084B611 /* wheelVW.png */,
+				601220721670D3FF0084B611 /* chassisVW.png */,
 				60474DE2166EB47E00EF5A69 /* texture.jpg */,
 				60730F7F166E4BD000FCB363 /* forest-texture-big.jpg */,
 				60730F7D166E46A800FCB363 /* test.jpg */,
@@ -558,6 +573,11 @@
 				60730F7E166E46A800FCB363 /* test.jpg in Resources */,
 				60730F80166E4BD000FCB363 /* forest-texture-big.jpg in Resources */,
 				60474DE3166EB47E00EF5A69 /* texture.jpg in Resources */,
+				601220731670D3FF0084B611 /* chassisVW.png in Resources */,
+				601220751670D5F80084B611 /* wheelVW.png in Resources */,
+				601220771670DC3B0084B611 /* background-2-1.png in Resources */,
+				601220791670E1F80084B611 /* background-2-2.png in Resources */,
+				6012207B1670EDC80084B611 /* tree.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
